@@ -2,23 +2,7 @@ def safeExtGet(prop, fallback) {
     rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
 }
 
-buildscript {
-    ext {
-        kotlin_version = "1.7.21"
-    }
-
-    repositories {
-        google()
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
-
 apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
 
 def test_gradle = "../../common-build-test.gradle"
 if (file(test_gradle).exists()) {
@@ -54,7 +38,7 @@ dependencies {
     if (findProject(":native:libs:sdc:id-voided-detection-models:id-voided-detection-models-android") != null) {
         api(project(path: ":native:libs:sdc:id-voided-detection-models:id-voided-detection-models-android"))
     } else {
-        def sdk_version = "6.25.3"
+        def sdk_version = "6.27.0"
 
         println("Version of the native sdk used in this build: ${safeExtGet('global_sdk_version', sdk_version)}")
         api "com.scandit.datacapture:id-voided-detection-models:${safeExtGet('global_sdk_version', sdk_version)}"
