@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.swift_version           = "5.0"
   s.source_files            = "Classes/**/*.{h,m,swift}"
   s.requires_arc            = true
-  s.dependency 'ScanditIdVoidedDetection', '= 6.27.2'
+  s.dependency 'ScanditIdVoidedDetection', '= 6.28.0'
 
   s.dependency "Flutter"
 
