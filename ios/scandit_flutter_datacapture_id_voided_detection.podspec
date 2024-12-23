@@ -9,12 +9,12 @@ Pod::Spec.new do |s|
   s.homepage                = pubspec["homepage"]
   s.license                 = { :file => "../LICENSE" }
   s.author                  = { "Scandit" => "support@scandit.com" }
-  s.platforms               = { :ios => "14.0" }
+  s.platforms               = { :ios => "13.0" }
   s.source                  = { :path => "." }
   s.swift_version           = "5.0"
   s.source_files            = "Classes/**/*.{h,m,swift}"
   s.requires_arc            = true
-  s.dependency 'ScanditIdVoidedDetection', '= 7.0.1'
+  s.dependency 'ScanditIdVoidedDetection', '= 6.28.3'
 
   s.dependency "Flutter"
 
