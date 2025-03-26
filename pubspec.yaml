@@ -1,6 +1,6 @@
 name: scandit_flutter_datacapture_id_voided_detection
 description: ScanditIdVoidedDetection is a library that enables Voided ID Detection capabilities.
-version: 7.1.2
+version: 7.1.3
 homepage: https://scandit.com
 
 environment:
