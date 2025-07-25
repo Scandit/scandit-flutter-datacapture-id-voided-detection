@@ -4,6 +4,13 @@ def safeExtGet(prop, fallback) {
 
 apply plugin: 'com.android.library'
 
+def test_gradle = "../../common-build-test.gradle"
+if (file(test_gradle).exists()) {
+   tasks.register("unifiedCoverageReport") {
+     // this is just to make sure the test execution will not fail here.
+   }
+}
+
 android {
     if (project.android.hasProperty("namespace")) {
         sourceSets {
@@ -31,7 +38,7 @@ dependencies {
     if (findProject(":native:libs:sdc:id-voided-detection-models:id-voided-detection-models-android") != null) {
         api(project(path: ":native:libs:sdc:id-voided-detection-models:id-voided-detection-models-android"))
     } else {
-        def sdk_version = "7.3.3"
+        def sdk_version = "6.28.6"
 
         println("Version of the native sdk used in this build: ${safeExtGet('global_sdk_version', sdk_version)}")
         api "com.scandit.datacapture:id-voided-detection-models:${safeExtGet('global_sdk_version', sdk_version)}"
