@@ -31,7 +31,7 @@ dependencies {
     if (findProject(":native:libs:sdc:id-voided-detection-models:id-voided-detection-models-android") != null) {
         api(project(path: ":native:libs:sdc:id-voided-detection-models:id-voided-detection-models-android"))
     } else {
-        def sdk_version = "7.4.4"
+        def sdk_version = "7.5.2"
 
         println("Version of the native sdk used in this build: ${safeExtGet('global_sdk_version', sdk_version)}")
         api "com.scandit.datacapture:id-voided-detection-models:${safeExtGet('global_sdk_version', sdk_version)}"
