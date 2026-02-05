@@ -3,7 +3,7 @@
  *
  * Copyright (C) 2024- Scandit AG. All rights reserved.
  */
- 
+
 import Flutter
 import UIKit
 
