@@ -9,15 +9,15 @@ Pod::Spec.new do |s|
   s.homepage                = pubspec["homepage"]
   s.license                 = { :file => "../LICENSE" }
   s.author                  = { "Scandit" => "support@scandit.com" }
-  s.platforms               = { :ios => "15.0" }
+  s.platforms               = { :ios => "14.0" }
   s.source                  = { :path => "." }
   s.swift_version           = "5.0"
-  s.source_files            = "scandit_flutter_datacapture_id_voided_detection/Sources/scandit_flutter_datacapture_id_voided_detection/**/*.{h,m,swift}"
+  s.source_files            = "Classes/**/*.{h,m,swift}"
   s.requires_arc            = true
-  s.ios.vendored_frameworks = "scandit_flutter_datacapture_id_voided_detection/Frameworks/ScanditIdVoidedDetection.xcframework"
+  s.dependency 'ScanditIdVoidedDetection', '= 7.6.10'
 
   s.dependency "Flutter"
 
-  # Flutter.framework does not contain a i386 slice.
-  s.pod_target_xcconfig = { "DEFINES_MODULE" => "YES", "EXCLUDED_ARCHS[sdk=iphonesimulator*]" => "i386" }
+  # Flutter.framework does not contain a i386 slice. Only x86_64 simulators are supported.
+  s.pod_target_xcconfig = { "DEFINES_MODULE" => "YES", "VALID_ARCHS[sdk=iphonesimulator*]" => "x86_64" }
 end
