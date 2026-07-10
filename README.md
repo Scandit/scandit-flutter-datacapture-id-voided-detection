@@ -1,3 +1,15 @@
-ScanditIdVoidedDetection is a library that enables Voided ID Detection capabilities.
+# scandit_flutter_datacapture_id_voided_detection
 
-Learn more with the [official documentation](https://docs.scandit.com/) or get started with [our samples](https://github.com/Scandit/datacapture-flutter-samples)
+A new Flutter plugin project.
+
+## Getting Started
+
+This project is a starting point for a Flutter
+[plug-in package](https://flutter.dev/developing-packages/),
+a specialized package that includes platform-specific implementation code for
+Android and/or iOS.
+
+For help getting started with Flutter development, view the
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
+
